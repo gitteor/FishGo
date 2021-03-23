@@ -180,7 +180,7 @@ h1 {
   border-top-color: #3e3e3e;
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
-  align: center;
+  text-align: center;
 }
 
 @keyframes spin {
