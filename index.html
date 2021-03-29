@@ -102,57 +102,15 @@
         prediction.sort(
           (a, b) => parseFloat(b.probability) - parseFloat(a.probability)
         );
-
-//         for (let i = 0; i < maxPredictions; i++) {
-//           const classPrediction =
-//             prediction[i].className +
-//             " : " +
-//             prediction[i].probability.toFixed(2) * 100 +
-//             "%";
-//           labelContainer.childNodes[i].innerHTML = classPrediction;
-//         }
-        
         
         var barWidth;
-        
         for (let i = 0; i < maxPredictions; i++) {
-                if (prediction[i].probability.toFixed(2) > 0.1) {
-                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
-                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
-                    barWidth = "4%"
-                } else {
-                    barWidth = "2%"
-                }
-                var labelTitle;
-                switch (prediction[i].className) {
-                    case "gamseongdom":
-                        labelTitle = "감성돔"
-                        break;
-                    case "doldom":
-                        labelTitle = "돌돔"
-                        break;
-                    case "chamdom":
-                        labelTitle = "참돔"
-                        break;
-                    case "bangyedom":
-                        labelTitle = "벵에돔"
-                        break;
-                    case "noraemi":
-                        labelTitle = "노래미"
-                        break;
-                    case "wooreok":
-                        labelTitle = "우럭"
-                        break;
-                    case "fox":
-                        labelTitle = "여우상"
-                        break;
-                    default:
-                        labelTitle = "알수없음"
-                }
-                var label = "<div class='animal-label d-flex align-items-center'>" + labelTitle + "</div>"
-                var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
-                labelContainer.childNodes[i].innerHTML = label + bar;
-            }
+          const classPrediction =
+            prediction[i].className +
+            " : " +
+            Math.round(prediction[i].probability.toFixed(2) * 100) +
+            "%";
+          labelContainer.childNodes[i].innerHTML = classPrediction;
         }
         
       }
