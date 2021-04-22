@@ -16,6 +16,7 @@
     ></script>
 
     <div class="file-upload">
+      <h3 class="label-container">FISH AI</h3>
       <h3 class="label-container">무슨 어종인가요?</h3>
 
       <div class="image-upload-wrap">
@@ -95,6 +96,8 @@
 
       // run the webcam image through the image model
       async function predict() {
+        
+        
         const image = document.getElementById("face-image");
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(image, false);
@@ -110,8 +113,29 @@
             " : " +
             Math.round(prediction[i].probability.toFixed(2) * 100) +
             "%";
-          labelContainer.childNodes[i].innerHTML = classPrediction;
-        }
+          
+          var labelTitle;
+          switch (prediction[i].className) {
+            case "gamseongdom":
+              labelTitle = "감성돔"
+              break;
+            case "chamdom":
+              labelTitle = "참돔"
+              break;
+            case "doldom":
+              labelTitle = "돌돔"
+              break;
+            case "uleog":
+              labelTitle = "우럭"
+              break;
+            case "nolaemi":
+              labelTitle = "노래미"
+              break;
+                
+            default:
+              labelTitle = "알수없음"
+          }
+          var label = "<div class='animal-label d-flex align-items-center'>" + labelTitle + "</div>"
         
       }
     </script>
@@ -197,19 +221,19 @@
                 }
                 var labelTitle;
                 switch (prediction[i].className) {
-                    case "감성돔":
+                    case "gamseongdom":
                         labelTitle = "감성돔"
                         break;
-                    case "참돔":
+                    case "chamdom":
                         labelTitle = "참돔"
                         break;
-                    case "돌돔":
+                    case "doldom":
                         labelTitle = "돌돔"
                         break;
-                    case "우럭":
+                    case "uleog":
                         labelTitle = "우럭"
                         break;
-                    case "노래미":
+                    case "nolaemi":
                         labelTitle = "노래미"
                         break;
                 
