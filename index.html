@@ -113,29 +113,6 @@
             " : " +
             Math.round(prediction[i].probability.toFixed(2) * 100) +
             "%";
-          
-          var labelTitle;
-          switch (prediction[i].className) {
-            case "gamseongdom":
-              labelTitle = "감성돔"
-              break;
-            case "chamdom":
-              labelTitle = "참돔"
-              break;
-            case "doldom":
-              labelTitle = "돌돔"
-              break;
-            case "uleog":
-              labelTitle = "우럭"
-              break;
-            case "nolaemi":
-              labelTitle = "노래미"
-              break;
-                
-            default:
-              labelTitle = "알수없음"
-          }
-          var label = "<div class='animal-label d-flex align-items-center'>" + labelTitle + "</div>"
         
       }
     </script>
