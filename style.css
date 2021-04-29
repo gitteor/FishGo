@@ -3,6 +3,11 @@ body {
   background-color: #fff;
 }
 
+.logo-image {
+ margin: 0 auto;
+ text-align: center;
+}
+
 .file-upload {
   padding: 3% 3%;
   margin: 0 auto;
