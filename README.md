@@ -7,5 +7,3 @@ https://gitteor.github.io/FishGo/
 
 - 10여종 분류 가능
 - 학습데이터 수집 후 100여종으로 확대 예정
-
-* gh-pages 브랜치 새로 생성하여 문제 해결
