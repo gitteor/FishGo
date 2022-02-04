@@ -1,6 +1,6 @@
 # Fish Classification
 바다어종 물고기 분류 서비스
-https://gitteor.github.io/fish
+https://gitteor.github.io/FishGo/
 
 ![01](https://user-images.githubusercontent.com/47709585/130359510-eaf33916-bc52-40c8-9529-ea113ff31958.PNG)
 
