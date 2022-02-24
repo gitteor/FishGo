@@ -4,6 +4,12 @@ https://gitteor.github.io/FishGo/
 
 ![01](https://user-images.githubusercontent.com/47709585/130359510-eaf33916-bc52-40c8-9529-ea113ff31958.PNG)
 
-
+현재 기능
 - 10여종 분류 가능
-- 학습데이터 수집 후 100여종으로 확대 예정
+
+보완할 점
+- 학습데이터 수집 (수산과학원 데이터 증폭)
+- 100여종으로 확대
+- 리스트에 대표사진 추가
+- UI 개선
+
