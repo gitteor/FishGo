@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background-color: #fff;
+  background-color: #f6f7fa;
 }
 
 .logo-image {
@@ -22,8 +22,8 @@ body {
 .file-upload-btn {
   width: 100%;
   margin-top: 20px;
-  color: #fff;
-  background: #1fb264;
+  color: #ffffff;
+  background: #ffffff;
   border: none;
   padding: 10px;
   border-radius: 4px;
@@ -35,7 +35,7 @@ body {
 }
 
 .file-upload-btn:hover {
-  background: #1aa059;
+  background: #ffffff;
   color: #ffffff;
   transition: all 0.2s ease;
   cursor: pointer;
@@ -74,9 +74,10 @@ body {
 
 .image-dropping,
 .image-upload-wrap:hover {
-  background-color: #3e3e3e;
-  border: 4px dashed #ffffff;
-  color: #ffffff;
+  background-color: #55aaff;
+  border: 2px dashed #ffffff;
+  color: #fff;
+  
 }
 
 .image-title-wrap {
